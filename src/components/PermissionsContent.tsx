@@ -356,11 +356,7 @@ const PermissionsContent = ({ navigation }: PermissionsContentProps) => {
           </Text>
         </View>
         <Button
-          title={
-            areAllPermissionsGranted()
-              ? "Continue to Email"
-              : "Grant All Permissions"
-          }
+          title="Continue"
           onPress={handleContinue}
           variant={areAllPermissionsGranted() ? "primary" : "secondary"}
           size="large"
