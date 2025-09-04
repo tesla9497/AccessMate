@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
+import { StatusBar, StyleSheet } from "react-native";
+import { useLocalSearchParams } from "expo-router";
 import Header from "../components/Header";
 import TopTabNavigator from "../components/TopTabNavigator";
 import { TabProvider, useTabContext } from "../contexts/TabContext";
-import { useLocalSearchParams } from "expo-router";
+import { SafeScreen } from "../components/ui";
 import Colors from "@/constants/Colors";
 
 const MainScreenContent = () => {
@@ -30,14 +31,14 @@ const MainScreenContent = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeScreen style={styles.container}>
       <StatusBar
         barStyle="dark-content"
         backgroundColor={Colors.light.background}
       />
       <Header title={getHeaderTitle(activeTab)} showBackButton={true} />
       <TopTabNavigator initialTab={tab as string} />
-    </SafeAreaView>
+    </SafeScreen>
   );
 };
 

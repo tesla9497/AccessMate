@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useRouter } from "expo-router";
-import { Button } from "../components/ui";
+import { Button, SafeScreen } from "../components/ui";
 import Colors from "@/constants/Colors";
 
 const Home = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeScreen style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>AccessMate</Text>
         <Text style={styles.subtitle}>Choose a screen to view</Text>
@@ -22,7 +22,7 @@ const Home = () => {
           />
         </View>
       </View>
-    </SafeAreaView>
+    </SafeScreen>
   );
 };
 

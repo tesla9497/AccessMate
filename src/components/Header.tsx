@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <View style={[styles.header, { paddingTop: insets.top + 12 }]}>
+    <View style={[styles.header, { paddingTop: 12 }]}>
       <View style={styles.headerLeft}>
         {showBackButton && (
           <IconButton
